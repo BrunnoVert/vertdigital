@@ -410,23 +410,23 @@ Por isso, contamos com um time de designers que estão sempre por dentro das úl
 
                 <h3 class="h6">Envie uma mensagem</h3>
 
-                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
+                <form name="contactForm" id="contactForm" method="POST" action="https://formspree.io/xwkngboe" novalidate="novalidate">
                     <fieldset>
 
                     <div class="form-field">
                         <input name="contactName" type="text" id="contactName" placeholder="Seu Nome" value="" minlength="2" required="" aria-required="true" class="full-width">
                     </div>
                     <div class="form-field">
-                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Seu Email" value="" required="" aria-required="true" class="full-width">
+                        <input name="_replyto" type="email" id="contactEmail" placeholder="Seu Email" value="" required="" aria-required="true" class="full-width">
                     </div>
                     <div class="form-field">
                         <input name="contactSubject" type="text" id="contactSubject" placeholder="Assunto" value="" class="full-width">
                     </div>
                     <div class="form-field">
-                        <textarea name="contactMessage" id="contactMessage" placeholder="Mensagem" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                        <textarea name="message" id="contactMessage" placeholder="Mensagem" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
                     </div>
                     <div class="form-field">
-                        <button class="full-width btn--primary">Enviar</button>
+                        <button class="full-width btn--primary" type="submit" >Enviar</button>
                         <div class="submit-loader">
                             <div class="text-loader">Enviando...</div>
                             <div class="s-loader">
