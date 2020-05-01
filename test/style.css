@@ -47,7 +47,7 @@ video {
 }
 
 .header h1 {
-      color: #37DC64;
+      color: #fff;
       font-size: 80px !important;
 }
 
@@ -87,7 +87,7 @@ video {
 }
 
 .nav #brand a {
-      color: #fff;
+      color: #37DC64;
       font-family: Poppins !important;
       transition: all 500ms ease-out;
 }
@@ -241,22 +241,20 @@ video {
 #content:before{
       content: '';
       animation: animate infinite 8s;
+      color: #37DC64;
 }
 @keyframes animate{
       0%{
-            content: 'Lucro';
+            content: 'LUCRO';
       }
-      25%{
-            content: 'Trefego';
+      33%{
+            content: 'TRÁFEGO';
       }
-      50%{
-            content: 'Marketshare';
-      }
-      75%{
-            content: 'Público';
+      66%{
+            content: 'MARKETSHARE';
       }
       100%{
-            content: 'Engajamento';
+            content: 'ENGAJAMENTO';
       }
 }
 
@@ -307,7 +305,7 @@ section {
 
 button {
       background: none;
-      border: .3pt solid rgba(184, 140, 93, 0.7);
+      border: .3pt solid rgba(55, 220, 100, 1);
       text-transform: uppercase !important;
       font-size: 12px !important;
       letter-spacing: 2px;
@@ -333,6 +331,13 @@ button {
       font-size: 28px;
       margin-bottom: 4px;
       color: rgb(182, 182, 182);
+      font-weight: lighter;
+}
+
+.service-name {
+      font-size: 28px;
+      margin-bottom: 4px;
+      color: #FFFFFF;
       font-weight: lighter;
 }
 
