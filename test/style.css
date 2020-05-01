@@ -47,7 +47,7 @@ video {
 }
 
 .header h1 {
-      color: #d3ae87;
+      color: #37DC64;
       font-size: 80px !important;
 }
 
@@ -235,6 +235,36 @@ video {
       }
 }
 
+
+
+
+#content:before{
+      content: '';
+      animation: animate infinite 8s;
+}
+@keyframes animate{
+      0%{
+            content: 'Lucro';
+      }
+      25%{
+            content: 'Trefego';
+      }
+      50%{
+            content: 'Marketshare';
+      }
+      75%{
+            content: 'Público';
+      }
+      100%{
+            content: 'Engajamento';
+      }
+}
+
+
+
+
+
+
 /*--------------- about section starts  --------------- */
 
 .content {
@@ -248,7 +278,7 @@ section {
 }
 
 .section-index {
-      color: #d3ae87;
+      color: #37DC64;
       font-weight: bolder;
       font-size: 20px;
       font-family: Poppins !important;
@@ -296,7 +326,7 @@ button {
 
 .icon ion-icon {
       font-size: 36px;
-      color: #d3ae87;
+      color: #37DC64;
 }
 
 .icon-title {
