@@ -345,11 +345,14 @@ button {
 
 .team-member, .team-img {
       position: relative;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
 }
 
 .team-img {
       background: grey;
       height: 340px;
+      width: 340px;
 }
 
 .members {
@@ -378,7 +381,12 @@ button {
 }
 
 .team-two {
-      background: url(team-two.jpg) no-repeat 50% 50%;
+      background: url(lucas.jpg) no-repeat 50% 50%;
+      background-size: cover;
+}
+
+.team-three {
+      background: url(felipe.jpg) no-repeat 50% 50%;
       background-size: cover;
 }
 
@@ -531,6 +539,10 @@ textarea:focus {
 
 #media ul li {
       display: inline-block;
+}
+
+ul li a {
+  color: #fefefe !important;
 }
 
 @media(max-width: 900px) {
