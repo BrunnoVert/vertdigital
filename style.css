@@ -238,7 +238,7 @@ video {
 
 
 
-#content:before{
+/* #content:before{
       content: '';
       animation: animate infinite 8s;
       color: #37DC64;
@@ -256,7 +256,7 @@ video {
       100%{
             content: 'ENGAJAMENTO';
       }
-}
+} */
 
 
 
