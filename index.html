@@ -31,7 +31,7 @@
             <!--------------- hero section starts here --------------->
 
             <div class="video-container">
-                  <video autoplay loop preload="auto" id="bgvid">
+                  <video autoplay muted loop playsinline preload="auto" id="bgvid">
                         <source src="videobg.mp4" type="video/mp4">
                   </video>
                   <script>
@@ -272,16 +272,27 @@
                         <div class="row">
                               <div class="col-md-12">
                                     <div class="news-data">
-                                    <div class="section-subheading">
-                                          <h1 class="wow fadeInUp" data-wow-delay="0.3s">Receba dicas para melhorar sua marca no <span style="color:#37DC64;">digital</span></h1>
-                                    </div>
+                                          <div class="section-subheading">
+                                                <h1 class="wow fadeInUp" data-wow-delay="0.3s">Receba dicas para melhorar sua marca no <span style="color:#37DC64;">digital</span></h1>
+                                          </div>
 
-                                    <div class="input-group wow fadeInUp" data-wow-delay="0.4s">
-                                          <input type="email" class="form-control" placeholder="Digite seu e-mail">
-                                          <span class="input-group-btn">
-                                                <button class="btn" type="submit">Se Inscreva</button>
-                                          </span>
-                                    </div>
+                                                <form class="validate input-group wow fadeInUp" data-wow-delay="0.4s" action="https://vertdigital.us17.list-manage.com/subscribe/post?u=5804c1922bbf15621d2831bc0&amp;id=07f92a3245" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"  target="_blank" novalidate>
+
+                                                      <input type="email" class="form-control" placeholder="Digite seu e-mail" value="" name="EMAIL"  id="mce-EMAIL">              
+                                                      <span class="input-group-btn">
+                                                            <input class="btn" type="submit" value="Se inscreva" name="subscribe" id="mc-embedded-subscribe">
+                                                            
+                                                      </span>
+                                                      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5804c1922bbf15621d2831bc0_07f92a3245" tabindex="-1" value=""></div>
+                                                      
+                                                </form>
+                                                <div id="mce-responses" class="clear subscription-warning">
+                                                      <div class="response" id="mce-error-response" style="display:none"></div>
+                                                      <div class="response" id="mce-success-response" style="display:none"></div>
+                                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                  
+                                                <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
                                     </div>
                               </div>
                         </div>
@@ -314,14 +325,17 @@
                         <div class="row">
                               <div class="col-md-4"></div>
                               <div class="col-md-6">
-                                    <form action="" name="contact-form" id="contact-form" method="POST">
+                                    <form class="gform"  
+                                          name="contact-form" 
+                                          id="contact-form" 
+                                          method="POST">
 
                                           <ul>
 
                                                 <li class="wow fadeInUp" data-wow-delay="0.6s">
                                                       <label for="contact-name">Nome :</label>
                                                       <div class="textarea">
-                                                            <input type="text" name="contact-name" id="contact-name" value="" required>
+                                                            <input type="text" name="name" id="contact-name" value="" required>
                                                       </div>
                                                 </li>
 
@@ -330,7 +344,7 @@
                                                 <li class="wow fadeInUp" data-wow-delay="0.7s">
                                                       <label for="contact-email">E-mail :</label>
                                                       <div class="textarea">
-                                                            <input type="email" name="contact-email" id="contact-email" value="" required>
+                                                            <input type="email" name="email" id="contact-email" value="" required>
                                                       </div>
                                                 </li>
 
@@ -339,7 +353,7 @@
                                                 <li class="wow fadeInUp" data-wow-delay="0.8s">
                                                      <label for="contact-project">Mensagem :</label>
                                                      <div class="textarea">
-                                                     <textarea name="contact-project" id="contact-project" rows="6" required></textarea>
+                                                     <textarea name="message" id="contact-project" rows="6" required></textarea>
                                                      </div>
                                                 </li>
 
@@ -390,6 +404,9 @@
                                           <h4>contato@vertdigital.com.br</h4>
 
                                           <br><br>
+
+                                          <p>CNPJ</p>
+                                          <h4></h4>
                                     </div>
                               </div>
 
@@ -404,7 +421,6 @@
             </div>
 
       </div>
-
 
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script>
@@ -468,6 +484,33 @@ $('a[href*="#"]')
       }
     }
   });
+
+
+  //CONTACT FORM processing
+  function formSubmit(event) {
+      var url = "https://script.google.com/macros/s/AKfycbzOIb5MJYMtGIblfo4AvFXOKKx8OVrUh61OKt2JD18N5snpgIo/exec";
+      var request = new XMLHttpRequest();
+      request.open('POST', url, true);
+      request.onload = function() { // request successful
+      // we can use server response to our request now
+
+      };
+
+      request.onerror = function() {
+      // request failed
+            disableSendButton();
+      };
+
+      request.send(new FormData(event.target)); // create FormData from form that triggered event
+      event.preventDefault();
+}
+
+// and you can attach form submit event like this for example
+function attachFormSubmitEvent(formId){
+  document.getElementById(formId).addEventListener("submit", formSubmit);
+}
+
+attachFormSubmitEvent(`contact-form`);
 
 
 </script>
