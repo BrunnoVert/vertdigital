@@ -1,7 +1,4 @@
 
-html, body {
-      cursor: url(cursor.png), auto !important;
-}
 
 * {
       box-sizing: border-box;
@@ -376,17 +373,17 @@ button {
 }
 
 .team-one {
-      background: url(team-one.jpg) no-repeat 50% 50%;
+      background: url(assets/team-one.jpg) no-repeat 50% 50%;
       background-size: cover;
 }
 
 .team-two {
-      background: url(lucas.jpg) no-repeat 50% 50%;
+      background: url(assets/lucas.jpg) no-repeat 50% 50%;
       background-size: cover;
 }
 
 .team-three {
-      background: url(felipe.jpg) no-repeat 50% 50%;
+      background: url(assets/felipe.jpg) no-repeat 50% 50%;
       background-size: cover;
 }
 
