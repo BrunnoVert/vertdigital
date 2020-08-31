@@ -7,6 +7,26 @@
       font-family: "Darker Grotesque" !important;
 }
 
+.testimonials {
+      height:70vh;
+      padding-bottom: 20px;
+}
+
+.img-testimonials {
+      border-radius: 50%;
+      height: 60px;
+      width: 60px !important;
+      float: left;
+      margin-right: 25px;
+}
+
+
+@media(max-width: 900px) {
+      .testimonials .owl-carousel {
+            margin-left: 3px;
+      }
+}
+
 /*--------------- hero section --------------- */
 
 .video-container {
@@ -41,10 +61,14 @@ video {
 
 .header {
       position: absolute;
-      top: 50%;
-      left: 45%;
-      transform: translate(-50%, -50%);
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+      top: 30vh;
 }
+
 
 .header h1 {
       color: #fff;
@@ -53,11 +77,14 @@ video {
 
 @media(max-width: 900px) {
       .header {
+            position: absolute;
+            top: 50%;
             left: 50%;
+            transform: translate(-50%, -50%);
       }
 
       .header h1 {
-            font-size: 34px !important;
+            font-size: 44px !important;
             text-align: center;
       }
 }
@@ -351,8 +378,8 @@ button {
 
 .team-img {
       background: grey;
-      height: 340px;
-      width: 340px;
+      height: 300px;
+      width: 300px;
 }
 
 .members {
@@ -369,6 +396,7 @@ button {
 
 .team-title span {
       font-size: 20px;
+      width: 100%;
 }
 
 .team-member {
@@ -376,18 +404,28 @@ button {
 }
 
 .team-one {
-      background: url(assets/team-one.jpg) no-repeat 50% 50%;
+      background: url(../assets/team-one.jpg) no-repeat 50% 50%;
       background-size: cover;
 }
 
 .team-two {
-      background: url(assets/lucas.jpg) no-repeat 50% 50%;
+      background: url(../assets/lucas.jpg) no-repeat 50% 50%;
       background-size: cover;
 }
 
 .team-three {
-      background: url(assets/felipe.jpg) no-repeat 50% 50%;
+      background: url(../assets/felipe.jpg) no-repeat 50% 50%;
       background-size: cover;
+}
+
+.counter {
+      padding: 140px 0;
+      background: #161616;
+}
+
+.counter h1 {
+      color: #fff;
+      margin-bottom: 40px;
 }
 
 /*--------------- newsletter section starts  --------------- */
@@ -495,6 +533,11 @@ textarea:focus {
       #contact-form {
             margin: 5% 0;
             width: 98%;
+      }
+
+      .team-title {
+            width: 85%;
+            margin: auto;
       }
 }
 
