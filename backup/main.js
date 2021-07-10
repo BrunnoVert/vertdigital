@@ -26,7 +26,7 @@ TxtRotate.prototype.tick = function () {
   if (this.isDeleting) { delta /= 2; }
 
   if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period + 6000;
+    delta = this.period + 3000;
     this.isDeleting = true;
   } else if (this.isDeleting && this.txt === '') {
     this.isDeleting = false;
@@ -102,35 +102,28 @@ $('a[href*="#"]')
 
 //CONTACT FORM processing
 function formSubmit(event) {
-  // initiate variables with form content
-		var name = $("#contact-name").val();
-		var email = $("#contact-email").val();
-    var message = $("#contact-text").val();
-    document.querySelector('#contact-submit').innerText = 'Enviando...';
+  var url = "https://script.google.com/macros/s/AKfycbzOIb5MJYMtGIblfo4AvFXOKKx8OVrUh61OKt2JD18N5snpgIo/exec";
+  var request = new XMLHttpRequest();
+  request.open('POST', url, true);
+  request.onload = function () { // request successful
+    // we can use server response to our request now
 
 
-        $.ajax({
-            type: "POST",
-            url: "https://fanicorn.api.stdlib.com/vert-digital-contact-form@dev/contact/",
-            data: "name=" + name + "&email=" + email + "&message=" + message,
-            success: function(response) {
-                if (response) {
-                    // tratamento acerto
-                    console.log("Work switch");
-                    document.querySelector('#contact-submit').innerText = 'Enviado!';
-                    document.querySelector("#contact-submit").classList.add("sucesso");
+  };
 
-                } else {
-                    //tratamento erro
-                }
-            }
-        });
+  request.onerror = function () {
+    // request failed
+    disableSendButton();
+  };
+
+  request.send(new FormData(event.target)); // create FormData from form that triggered event
   event.preventDefault();
 }
 
 // and you can attach form submit event like this for example
 function attachFormSubmitEvent(formId) {
   document.getElementById(formId).addEventListener("submit", formSubmit);
+
 }
 
 attachFormSubmitEvent(`contact-form`);
